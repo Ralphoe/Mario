@@ -1,0 +1,196 @@
+@use "./base_scss/varibles/" as *;
+
+/* banner1 */
+.mario1 {
+  width: 70%;
+  z-index: 2;
+  animation: mario1 $animation-banner;
+}
+@keyframes mario1 {
+  0% {top: 100vh;
+    left: 10%;}
+  //1.2s
+  10% {top: -10vh;
+    left: 10%;}
+  //2.4s
+  20% {top: -10vh;
+    left: 10%;}
+  //3.6s
+  30% {top: 100vh;
+    left: 10%;}
+  //12s
+  100%{top: 100vh;
+    left: 10%;}
+}
+.luigi {
+  width: 45%;
+  z-index: 3;
+  animation: luigi $animation-banner 0.35s;
+}
+@keyframes luigi {
+  0% {top: 100vh;
+    left: 70%;}
+  //1.2s
+  10% {top: 5vh;
+    left: 70%;}
+  //2.4s
+  20% {top: 5vh;
+    left: 70%;}
+  //3.6s
+  30% {top: 100vh;
+    left: 70%;}
+  //12s
+  100%{top: 100vh;
+    left: 70%;}
+}
+.brick {
+  width: 70%;
+  z-index: 1;
+  animation: brick $animation-banner 0.45s;
+}
+@keyframes brick {
+  0% {top: -15vh;
+    left: 150%;}
+  //1.2s
+  10% {top: -15vh;
+    left: 30%;}
+  //2.4s
+  20% {top: -15vh;
+    left: 30%;}
+  //3.6s
+  30% {top: -15vh;
+    left: 150%;}
+  //12s
+  100%{top: -15vh;
+    left: 150%;}
+}
+/* banner2 */
+.mario2 {
+  width: 80%;
+  z-index: 2;
+  animation: mario2 $animation-banner 4s;
+
+}
+@keyframes mario2 {
+  0% {top: 100vh;
+    left: -5%;}
+  //1.2s
+  10% {top: -10vh;
+    left: -5%;}
+  //2.4s
+  20% {top: -10vh;
+    left: -5%;}
+  //3.6s
+  30% {top: 100vh;
+    left: -5%;}
+  //12s
+  100%{top: 100vh;
+    left: -5%;}
+}
+.peach {
+  width: 45%;
+  z-index: 3;
+  animation: peach $animation-banner 4.35s;
+}
+@keyframes peach {
+  0% {top: 100vh;
+    left: 45%;}
+  //1.2s
+  10% {top: 10vh;
+    left: 45%;}
+  //2.4s
+  20% {top: 10vh;
+    left: 45%;}
+  //3.6s
+  30% {top: 100vh;
+    left: 45%;}
+  //12s
+  100%{top: 100vh;
+    left: 45%;}
+}
+.pipe {
+  width: 45%;
+  z-index: 1;
+  animation: pipe $animation-banner 4.45s;
+}
+@keyframes pipe {
+  0% {top: 100vh;
+    left: 80%;}
+  //1.2s
+  10% {top: -5vh;
+    left: 80%;}
+  //2.4s
+  20% {top: -5vh;
+    left: 80%;}
+  //3.6s
+  30% {top: 100vh;
+    left: 80%;}
+  //12s
+  100%{top: 100vh;
+    left: 80%;}
+}
+/* banner3 */
+.mario3 {
+  width: 80%;
+  z-index: 2;
+  animation: mario3 $animation-banner 8s;
+}
+@keyframes mario3 {
+  0% {top: 100vh;
+    left: -10%;}
+  //1.2s
+  10% {top: -5vh;
+    left: -10%;}
+  //2.4s
+  20% {top: -5vh;
+    left: -10%;}
+  //3.6s
+  30% {top: 100vh;
+    left: -10%;}
+  //12s
+  100%{top: 100vh;
+    left: -10%;}
+}
+.toad {
+  width: 45%;
+  z-index: 3;
+  animation: toad $animation-banner 8.35s;
+}
+@keyframes toad {
+  0% {top: 100vh;
+    left: 55%;}
+  //1.2s
+  10% {top: 5vh;
+    left: 55%;}
+  //2.4s
+  20% {top: 5vh;
+    left: 55%;}
+  //3.6s
+  30% {top: 100vh;
+    left: 55%;}
+  //12s
+  100%{top: 100vh;
+    left: 55%;}
+}
+.star {
+  width: 45%;
+  z-index: 1;
+  animation: star $animation-banner 8.45s;
+}
+@keyframes star {
+  0% {top: 100vh;
+    left: 80%;}
+  //1.2s
+  10% {top: -10vh;
+    left: 80%;}
+  //2.4s
+  20% {top: -10vh;
+    left: 80%;}
+  //3.6s
+  30% {top: 100vh;
+    left: 80%;}
+  //12s
+  100%{top: 100vh;
+    left: 80%;}
+}
+

@@ -1,0 +1,31 @@
+//字體樣式
+// $base-fonts
+
+$main-fonts: Catamaran, sans-serif;
+
+//字級規範
+$heading-size-1: 4rem;
+$heading-size-2: 3rem;
+
+$font-size-xs: .75rem;
+$font-size-s: .8rem;
+$font-size-m: .95rem;
+$font-size-l: 1.3rem;
+$font-size-xl: 1.7rem;
+$font-size-xxl: 11rem;
+
+//判斷式定義基本font-size
+
+@mixin set-font-size($size) {
+    @if ($size ==small) {
+        font-size: $font-size-2 * 0.8;
+    }
+
+    @else if ($size ==medium) {
+        font-size: $font-size-2
+    }
+
+    @else if ($size ==large) {
+        font-size: $font-size-2 * 1.2;
+    }
+}

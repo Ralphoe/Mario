@@ -1,0 +1,43 @@
+//  灰階 
+$white: #f3f3f3;
+$light: #ededed;
+$light-grey: #dddddd;
+$grey: #302f2f;
+$deep-grey: #302f2f;
+$dark-grey:#2a2929;
+
+//  主色調 
+$primary-color1: #e70112 !default;
+$primary-color2: #b20722;
+$primary-color3: #dddddd;
+$primary-color4: #dddddd;
+
+//  輔助色調 
+$secondary-color1: #bc00b7;
+$secondary-color2: #23b2ff;
+$secondary-color3: #dddddd;
+
+//  半透明色調 
+
+//  漸層色調 
+$repeat-gradient:repeating-linear-gradient(
+    -45deg,
+    #302f2f,
+    #302f2f 6px,
+    #2a2929 0,
+    #2a2929 12px
+  );
+
+//  紅色漸層
+$gradien-red:#e70112 20%,#b20722 80%;
+
+
+// 色彩濾鏡 
+$color-lighten: lighten(#3498db, 10%);
+$color-darken: darken(#3498db, 10%);
+$color-saturate: saturate(#3498db, 20%);
+$color-desaturate: desaturate(#3498db, 20%);
+$color-grayscale: grayscale(#3498db);
+$color-invert: invert(#3498db);
+$color-rgba: rgba(#3498db, 0.5);
+$color-mix: mix(#3498db, #34db4a, 50%);

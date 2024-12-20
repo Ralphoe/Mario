@@ -1,0 +1,264 @@
+@charset "UTF-8";
+@use "./base_scss/reset/reset";
+@use "../scss/banner";
+@use "./base_scss/varibles/" as *;
+@use "./base_scss/functions/" as *;
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap");
+
+body {
+  font-family: $main-fonts;
+  color: white; /* 整個網站都是白色 */
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+* {
+  /* 不算內距跟邊框 */
+  box-sizing: border-box;
+}
+
+/* BANNER區塊 */
+#banner {
+  height: 100vh;
+  background-image: url(../images/bg-pattern-logos.png),
+    // linear-gradient(135deg, $primary-color1 20%, $primary-color2 80%);
+    linear-gradient(135deg, $gradien-red);
+  background-size: cover;
+  @extend %flex-center;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 999;
+
+    background-color: $primary-color1;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .row {
+    display: flex;
+    width: 80%;
+
+    .col {
+      color: white;
+      &:first-child {
+        width: 30rem;
+      }
+      &:last-child {
+        position: relative;
+        width: calc(100% - 30rem);
+        figure {
+          position: absolute;
+        }
+      }
+      h2 {
+        span {
+          display: block;
+
+          &:first-child {
+            font-size: $font-size-xl;
+            font-weight: 400;
+          }
+          &:last-child {
+            font-size: $font-size-xxl;
+            font-weight: 900;
+          }
+        }
+      }
+
+      p {
+        font-size: $font-size-l;
+        margin: 1.5rem 0;
+        line-height: $font-size-l * 1.5;
+      }
+    }
+  }
+}
+
+.btn-single {
+  @extend %button-main;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+
+  font-size: $font-size-xl;
+  font-weight: 700;
+  //   transition: map-get($speed, normal) $timing;
+  transition: 0.35s;
+  &:hover {
+    @extend %button-main-hover;
+  }
+}
+
+.btn-list {
+  @extend %button-main;
+  padding: 1.5rem;
+  margin: 1.5rem;
+
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  transition: 0.35s;
+  // border: 3px solid $dark-grey;
+  &:hover {
+    @extend %button-main-hover;
+  }
+}
+
+/* 主要內容 */
+
+section {
+  @extend %flex-center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 10%;
+
+  .title {
+    font-size: 4rem;
+    font-weight: 700;
+    padding-bottom: 15vh;
+  }
+}
+
+/* NEWS區塊 */
+
+#news {
+  height: 100vh;
+  background-color: $primary-color1;
+}
+
+.list-box {
+  @extend %flex-center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .list-item {
+    flex: 1;
+    margin: 20px;
+    background-image: $repeat-gradient;
+
+    border-radius: 30px;
+    padding: 35px;
+
+    @extend %flex-center;
+    flex-direction: column;
+    &:hover {
+      .scenes {
+        transform: perspective(600px) rotateX(30deg) skewX(-20deg);
+      }
+      .role {
+        transform: scale(1.2);
+      }
+    }
+
+    .img-box {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      .scenes {
+        height: 30vh;
+        width: 100%;
+        margin-bottom: 1rem;
+        transition: 1s ease-in-out;
+        transform-origin: bottom;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .role {
+        position: absolute;
+        bottom: 5vh;
+        width: 80%;
+        transition: 1s ease-in-out;
+        transform-origin: bottom;
+        z-index: 999;
+      }
+    }
+    .content-box {
+      * {
+        margin: 0.5rem 0;
+      }
+      .date {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+
+      h3 {
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
+      .content {
+        font-size: 1rem;
+        @extend %multiple-lines;
+        -webkit-line-clamp: 2;
+      }
+    }
+  }
+}
+
+/* Product區塊 */
+
+#product {
+  height: 130vh;
+  background: url(../images/wavy-line.png) no-repeat,
+    url(../images/bg-pattern-logos.png) repeat,
+    linear-gradient($secondary-color2, $secondary-color1);
+  background-size: 100%;
+  // background-repeat: no-repeat,repeat;
+
+  //卡片rotate的時候有3D效果
+  .list-box {
+    .list-item {
+      transform-style: preserve-3d;
+      * {
+        transform: translateZ(50px);
+      }
+    }
+  }
+  h2 {
+    margin: 4rem 0;
+  }
+
+  figure {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+
+    img {
+      width: 120%;
+      position: absolute;
+      top: -20vh;
+
+    }
+  }
+  .list-item {
+    padding: 2rem;
+    gap: 1rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 100%;
+  }
+  p {
+    @extend %multiple-lines;
+    -webkit-line-clamp: 2;
+    font-size: 1rem;
+  }
+}
